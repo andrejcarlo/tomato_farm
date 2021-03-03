@@ -10,5 +10,9 @@ module.exports = {
   ],
   rules: {
     quotes: ["error", "double"],
+    indent: ["error", 2],
+  },
+  parserOptions: {
+    ecmaVersion: 8,
   },
 };
