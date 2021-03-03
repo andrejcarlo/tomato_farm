@@ -1,0 +1,86 @@
+{
+  "tomatoes": [
+    {
+      "name": "Sweet cherry tomato",
+      "harvest per year": 4,
+      "number of plants": 300,
+      "environment condition": {
+        "light intensity": {
+          "low": 6000,
+          "high": 10000,
+          "unit": "lx"
+        },
+        "relative humidity": {
+          "low": 44,
+          "high": 50,
+          "unit": "%"
+        },
+        "temperature": {
+          "daytime": {
+            "low": 22,
+            "high": 25,
+            "unit": "degree"
+          },
+          "nighttime": {
+            "low": 10,
+            "high": 12,
+            "unit": "degree"
+          }
+        }
+      },
+      "soil condition": {
+        "moisture": {
+          "low": 75,
+          "high": 85,
+          "unit": "%"
+        },
+        "pH": {
+          "low": 7.5,
+          "high": 8,
+          "unit": "pH"
+        }
+      }
+    },
+    {
+      "name": "Big juicy tomato",
+      "harvest per year": 3,
+      "number of plants": 250,
+      "environment condition": {
+        "light intensity": {
+          "low": 5000,
+          "high": 11000,
+          "unit": "lx"
+        },
+        "relative humidity": {
+          "low": 42,
+          "high": 52,
+          "unit": "%"
+        },
+        "temperature": {
+          "daytime": {
+            "low": 24,
+            "high": 28,
+            "unit": "degree"
+          },
+          "nighttime": {
+            "low": 12,
+            "high": 15,
+            "unit": "degree"
+          }
+        }
+      },
+      "soil condition": {
+        "moisture": {
+          "low": 73,
+          "high": 80,
+          "unit": "%"
+        },
+        "pH": {
+          "low": 7.5,
+          "high": 8,
+          "unit": "pH"
+        }
+      }
+    }
+  ]
+}

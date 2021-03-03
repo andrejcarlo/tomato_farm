@@ -1,0 +1,18 @@
+{
+  "production": [
+    {
+      "name": "Sweet cherry tomato",
+      "harvest date": 1588317180000,
+      "number of plants": 300,
+			"weight in ton": 200
+		},
+		{
+      "name": "Big juicy tomato",
+      "harvest date": 1588309205000,
+      "number of plants": 250,
+			"weight in ton": 320
+		}
+
+  ]
+
+}
