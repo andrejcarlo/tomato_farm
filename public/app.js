@@ -48,6 +48,28 @@ function get_data_by_id(collection, id){
         });
 }
 
+function get_sorted_data(collection, key, operator, value) {
+
+   const query_instance = db.collection(collection).where(key, operator, parseFloat(value));
+    if (operator != "==") {
+        query_instance = query_instance.orderBy(key, 'desc');
+    }
+
+    query_instance.get().then(snapshot =>
+        {
+            if (snapshot.empty) {
+                console.log('No matching documents.');
+                return;
+            }  
+              
+            snapshot.docs.forEach(doc => {
+                //console.log(doc);
+                renderData(doc,collection);
+            });
+    });
+   
+}
+
 // get data 
 get_data_form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -62,10 +84,10 @@ get_data_form.addEventListener('submit', (e) => {
 
     // check whether you wanna index by id or just by collection name
     if (id_doc != '' && collection != '') {
-            console.log("Looking for collection with id");
+            console.log("Looking for document in collection with id");
             get_data_by_id(collection, id_doc)
         } else if(collection != '') {
-            console.log("Looking for collection")
+            console.log("Looking through all documents for collection")
             get_data(collection);
         }
     get_data_form.collection.value = '';
@@ -90,10 +112,14 @@ sort_data_form.addEventListener('submit', (e) => {
 
     // check whether you wanna index by id or just by collection name
     if (collection != '') {
-            console.log("Looking for collection with id");
-            get_data_by_id(collection, id_doc)
+            console.log("Sorting collection!");
+            get_sorted_data(collection, key, operator, val);
     }
 
     get_data_form.collection.value = '';
     get_data_form.id_doc.value = '';
+
+    sort_data_form.key_sort.value = '';
+    sort_data_form.value_sort.value = '';
+    sort_data_form.operator_sort.value = '';
 });
