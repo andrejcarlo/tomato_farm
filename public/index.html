@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <h1>Tomato Farm</h1>
+
+        <div class="content">
+
+            <form id="request-data-form">
+                <input type="text" name="collection" placeholder="Collection">
+                <input type="text" name="id-doc" placeholder="Id Document">
+                <button>Get Data</button>
+            </form>
+
+            <form id="sort-farm-data-form">
+                <input type="text" name="key" placeholder="Key">
+                <input type="text" name="operator" placeholder="Operator">
+                <input type="text" name="value" placeholder="Value">
+                <button>Sort by</button>
+            </form>
+
+            <ul id="farm-data-list"></ul>
+
+        </div>
+
+        <script>
+            // Initialize Firebase
+            firebase.initializeApp(config);
+            const db = firebase.firestore();
+            db.settings({ timestampsInSnapshots: true }); 
+        </script>
+        <script src="app.js"></script>
+    </body>
+</html>
