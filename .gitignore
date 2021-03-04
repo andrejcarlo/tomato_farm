@@ -1,3 +1,4 @@
 *.docm
 conda
 .vscode
+.firebase

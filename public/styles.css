@@ -69,6 +69,20 @@ li div{
 }
 
 
+.id_class {
+    position: absolute;
+    top: 0;
+    font-size: 15px;
+    right: 170px;
+    background: rgba(148, 148, 148, 0.00);
+    opacity: 0.2;
+    width: 40px;
+    text-align: center;
+    padding: 10px 0;
+    font-weight:  bold;
+}
+
+
 form input{
     float: left;
     width: 25%;

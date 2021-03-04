@@ -9,15 +9,19 @@ function renderData(doc, collection){
     let name = document.createElement('span');
     let data_json = document.createElement('span');
     let cross = document.createElement('div');
+    let id_doc = document.createElement('div');
+    id_doc.className = 'id_class'
 
     li.setAttribute('data-id', doc.id);
     name.textContent = (collection == "tomatoes" || collection == "production") ? ("Name is " + doc.data().name) : ("At time " + doc.data().time);
     data_json.textContent = JSON.stringify(doc.data());
     cross.textContent = 'x';
+    id_doc.textContent = doc.id;
 
     li.appendChild(name);
     li.appendChild(data_json);
     li.appendChild(cross);
+    li.appendChild(id_doc)
 
     farm_data_list.appendChild(li);
 
@@ -26,6 +30,7 @@ function renderData(doc, collection){
         e.stopPropagation();
         let id = e.target.parentElement.getAttribute('data-id');
         db.collection(collection).doc(id).delete();
+        console.log("Deleted document!")
     });
 }
 
