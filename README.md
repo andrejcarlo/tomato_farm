@@ -52,3 +52,4 @@ For example, the following two images show how to sort the data to display the d
 - Don't post the API Key for firebase publicly on github.
 - Real time update of the data.
 - More error handling. While some errors/debugging messages are thrown in the console, and as a reponse from the API, the errors should be more visible to the user.
+- Use a much easier db framework. Firestore has the advantage of being hosted on the cloud by google, however, Postgres is open source and would have allowed much easier setup of the db design. 
