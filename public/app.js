@@ -55,7 +55,7 @@ function get_data_by_id(collection, id){
 
 function get_sorted_data(collection, key, operator, value) {
 
-   let query_instance = db.collection(collection).where(key, operator, parseFloat(value));
+   let query_instance = db.collection(collection).where(key, operator, parseFloat(value)).where(key, "==", second_highest);
     if (operator != "==") {
         query_instance = query_instance.orderBy(key, 'desc');
     }

@@ -9,6 +9,7 @@ admin.initializeApp();
 const db = admin.firestore();
 const farmApp = express();
 
+// cross origin requests
 farmApp.use(cors({origin:true}))
 
 farmApp.get("/", async (req, res) => {
